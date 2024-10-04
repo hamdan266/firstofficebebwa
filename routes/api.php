@@ -19,5 +19,6 @@ Route::middleware('api_key')->group(function () {
     Route::apiResource('/offices', OfficeSpaceController::class);
 
     Route::post('/booking-transaction', [BookingTransactionController::class, 'store']);
+
     Route::post('/check-booking', [BookingTransactionController::class, 'booking_details']);
 });
